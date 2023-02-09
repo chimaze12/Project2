@@ -1,3 +1,6 @@
 # Project 1
+In this project, we built a book review webapp. The webapp allows member registration(signups), login and logout. The webapp also can be used to search for and drop reviews on books from a pool of books in the database using the author name, ISBN number, or book title. After search, the user is allowed to click on the result and is taken to a page that provides details of the book while also availing the user an opportunity to drop a review.
+
+The webapp is built with a combination of the Flask framework, html, sql, and a number of libraries. The folder, Flask_session, records the unique sessions of independent users; the folder, templates, contains all the webpage designs (i.e html pages) used in developing the webapp; the file, application.py, is a python file that houses the codes for the webapp's functionalities; the books.csv file is a file containing a table of all the books used to create the search database; the models.py and import.py are files that help to create and import the needed tables into our postgresql database. 
 
 ENGO 
