@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, render_template, request
 from models import *
-from application import DATABASE_URL
+from app import DATABASE_URL
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL

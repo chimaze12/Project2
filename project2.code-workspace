@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../New folder"
+		},
+		{
+			"path": "../../../../../bookstore-stock-manager-main"
+		}
+	],
+	"settings": {}
+}

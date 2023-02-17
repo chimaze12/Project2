@@ -43,7 +43,8 @@
 
         <div class="col-5">
             {% if result == []%}
-                <h4> No result found </h4>
+              <h1>404 Not Found</h1>
+              <p>The requested book was not found on this server.</p>
             {% endif %}
         </div>
 
@@ -57,6 +58,9 @@
                     </h5>
                 </li>
             {% endfor %}
+            <div> 
+              {{api}}
+            </div>
         </ol>
     </div>
 

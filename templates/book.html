@@ -21,7 +21,7 @@
 
     <ul>
       <li>Author: {{book.author}}</li>
-      <li>Publication year: {{book.publicationyear}}</li>
+      <li>Publication year: {{book.year}}</li>
       <li>ISBN : {{isbn}}</li>
     </ul>
 
@@ -44,7 +44,7 @@
       </div>
       {% endif %}
     </form>
-    <h2>Reviews</h2>
+    <h2>My Reviews</h2>
     <ul>
       {% for review in reviews %}
       <li> Rating: {{review.rating}} </li>
@@ -54,10 +54,28 @@
       {% endfor %}
     </ul>
 
-    <h2>Goodreads ratings</h2>
+    <h2>Google Ratings</h2>
     <ul>
-      <li>Average rating: {{avg_rating_Goodreads}}</li>
-      <li>{{number_rating_Goodreads}} User reviews</li>
+      <li>Average rating: {{avg_rating}}</li>
+      <li>{{rating_count}} User reviews</li>
     </ul>
+    <div class=" col-3">
+      <pre>{{ jsonobj|tojson(indent=4) }}</pre>
+    </div>
+    
+    <h1>Book Information</h1>
+    <ul>
+      <li>Title: {{ jsonobj.title }}</li>
+      <li>Author: {{ jsonobj.author }}</li>
+      <li>ISBN-10: {{ book.isbn}} </li>
+      <li>ISBN-13: {{ jsonobj.isbn_13 }}</li>
+      <li>Published: {{ jsonobj.published_date}}</li>
+      <li>Review Count: {{ jsonobj.review_count }}</li>
+      <li>Average Rating: {{ jsonobj.average_rating }}</li>
+      {% if jsonobj.description %}
+      <li>Description: {{ description_google }}</li>
+      {% endif %}
+    </ul>
+    
 
 {% endblock %}
